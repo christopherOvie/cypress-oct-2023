@@ -1,0 +1,155 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "start": "2023-10-25T05:00:34.693Z",
+    "end": "2023-10-25T05:02:33.044Z",
+    "duration": 118351,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2241fea8-b7ba-487e-88e2-b1da273d52d5",
+      "title": "",
+      "fullFile": "cypress\\e2e\\smokeTest\\addEmployeeDatatype.cy.js",
+      "file": "cypress\\e2e\\smokeTest\\addEmployeeDatatype.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "23fdcb4a-e6b6-4a09-802f-f50eeb92e31b",
+          "title": "verify add employee functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify login with valid username and valid password",
+              "fullTitle": "verify add employee functionality verify login with valid username and valid password",
+              "timedOut": null,
+              "duration": 33404,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\smokeTest\\\\addEmployeeDatatype.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\addEmployeeDatatype.cy.js\\\\verify add employee functionality -- verify login with valid username and valid password (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.login(credentials.username, credentials.password);\ncy.contains(\"PIM\").click({\n  force: true\n});\ncy.contains(\"Add Employee\").click();\ncy.get(\"input[placeholder='First Name']\").type(\"christo\");\ncy.get(\"input[name='lastName']\").type(\"king\");\ncy.get(\"button[type='submit']\").click();\ncy.contains(\"Successfully Saved\").should(\"be.visible\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 30000ms: expected '<a.oxd-main-menu-item.active>' to be 'visible'\n\nThis element `<a.oxd-main-menu-item.active>` is not visible because its parent `<nav.oxd-navbar-nav>` has CSS property: `overflow: hidden` and an effective width and height of: `0 x 367` pixels.",
+                "estack": "AssertionError: Timed out retrying after 30000ms: expected '<a.oxd-main-menu-item.active>' to be 'visible'\n\nThis element `<a.oxd-main-menu-item.active>` is not visible because its parent `<nav.oxd-navbar-nav>` has CSS property: `overflow: hidden` and an effective width and height of: `0 x 367` pixels.\n    at Context.eval (webpack://learning-cypress-oct-2023/./cypress/support/commands.js:22:29)",
+                "diff": null
+              },
+              "uuid": "7a8d94ff-f635-442f-adf4-61926234594e",
+              "parentUUID": "23fdcb4a-e6b6-4a09-802f-f50eeb92e31b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify mandatory details in add employee",
+              "fullTitle": "verify add employee functionality verify mandatory details in add employee",
+              "timedOut": null,
+              "duration": 48274,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\smokeTest\\\\addEmployeeDatatype.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\addEmployeeDatatype.cy.js\\\\verify add employee functionality -- verify mandatory details in add employee (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.login(creds[0], creds[1]);\ncy.contains(\"PIM\").click({\n  force: true\n});\ncy.contains(\"Add Employee\").click();\ncy.get(\"button[type='submit']\").click();\ncy.contains(\"Required\").should(\"be.visible\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 30000ms: expected '<a.oxd-main-menu-item.active>' to be 'visible'\n\nThis element `<a.oxd-main-menu-item.active>` is not visible because its parent `<nav.oxd-navbar-nav>` has CSS property: `overflow: hidden` and an effective width and height of: `0 x 367` pixels.",
+                "estack": "AssertionError: Timed out retrying after 30000ms: expected '<a.oxd-main-menu-item.active>' to be 'visible'\n\nThis element `<a.oxd-main-menu-item.active>` is not visible because its parent `<nav.oxd-navbar-nav>` has CSS property: `overflow: hidden` and an effective width and height of: `0 x 367` pixels.\n    at Context.eval (webpack://learning-cypress-oct-2023/./cypress/support/commands.js:22:29)",
+                "diff": null
+              },
+              "uuid": "0c83fb27-0d2a-4ebc-bd8c-af3a62154753",
+              "parentUUID": "23fdcb4a-e6b6-4a09-802f-f50eeb92e31b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify charcter limit for first name field",
+              "fullTitle": "verify add employee functionality verify charcter limit for first name field",
+              "timedOut": null,
+              "duration": 33367,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\smokeTest\\\\addEmployeeDatatype.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\addEmployeeDatatype.cy.js\\\\verify add employee functionality -- verify charcter limit for first name field (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit(Cypress.env(\"loginUrl\"));\ncy.get(\"input[placeholder='Username']\").type(Cypress.env(\"username\"));\ncy.get(\"input[placeholder='Password']\").type(Cypress.env(\"password\"));\ncy.get(\"button[type='submit']\").click();\n//cy.url().should(\"eq\",\"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index\")\ncy.contains(\"Dashboard\").should(\"be.visible\");\ncy.contains(\"PIM\").click();\ncy.contains(\"Add Employee\").click();\ncy.get(\"button[type='submit']\").click();\ncy.get(\"input[placeholder='First Name']\").type(\"xxxxrrrrrrrrrrrrrrrrrhhhhhhhhhhhhkkkkkkkkkkkkkkkkkkkkkk\");\ncy.contains(\"Should not exceed 30 characters\").should(\"be.visible\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 30000ms: expected '<a.oxd-main-menu-item.active>' to be 'visible'\n\nThis element `<a.oxd-main-menu-item.active>` is not visible because its parent `<nav.oxd-navbar-nav>` has CSS property: `overflow: hidden` and an effective width and height of: `0 x 367` pixels.",
+                "estack": "AssertionError: Timed out retrying after 30000ms: expected '<a.oxd-main-menu-item.active>' to be 'visible'\n\nThis element `<a.oxd-main-menu-item.active>` is not visible because its parent `<nav.oxd-navbar-nav>` has CSS property: `overflow: hidden` and an effective width and height of: `0 x 367` pixels.\n    at Context.eval (webpack://learning-cypress-oct-2023/./cypress/e2e/smokeTest/addEmployeeDatatype.cy.js:26:29)",
+                "diff": null
+              },
+              "uuid": "eb36f518-0d64-4b1d-8398-07723dc2f429",
+              "parentUUID": "23fdcb4a-e6b6-4a09-802f-f50eeb92e31b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "7a8d94ff-f635-442f-adf4-61926234594e",
+            "0c83fb27-0d2a-4ebc-bd8c-af3a62154753",
+            "eb36f518-0d64-4b1d-8398-07723dc2f429"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 115045,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

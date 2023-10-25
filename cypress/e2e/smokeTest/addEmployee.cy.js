@@ -9,7 +9,7 @@ describe("verify add employee functionality", () => {
       "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"
     );
     //cy.contains('Dashboard').should('be.visible')
-    cy.contains("PIM").click({force: true});
+    cy.contains("PIM").click({ force: true });
     cy.contains("Add Employee").click();
     cy.get("input[placeholder='First Name']").type("christo");
     cy.get("input[name='lastName']").type("king");
@@ -25,8 +25,8 @@ describe("verify add employee functionality", () => {
       "eq",
       "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"
     );
-    cy.contains('Dashboard').should('be.visible')
-    cy.contains("PIM").click({force: true});
+    cy.contains("Dashboard").should("be.visible");
+    cy.contains("PIM").click({ force: true });
     cy.contains("Add Employee").click();
     cy.get("button[type='submit']").click();
     cy.contains("Required").should("be.visible");

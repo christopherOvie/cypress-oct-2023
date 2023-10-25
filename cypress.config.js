@@ -6,15 +6,15 @@ module.exports = defineConfig({
     //baseUrl: "https://opensource-demo.orangehrmlive.com",
     defaultCommandTimeout: 30000,
     pageLoadTimeout: 120000,
-    //"viewportHeight": 375,
+   // "viewportHeight": 375,
     //"viewportWidth": 667,
-   // "retries": {openMode:3,runMode: 1}, //open mode  test run  runmode=comm
+    "retries": {openMode:3,runMode: 1}, //open mode  test run  runmode=comm
     env:{
 "username":"Admin",
 "password":"admin123",
 "loginUrl":"https://opensource-demo.orangehrmlive.com",
     },
-    "video":false,
+    "video":true,
     setupNodeEvents(on, config) {
       // implement node event listeners here
       require('cypress-mochawesome-reporter/plugin')(on);

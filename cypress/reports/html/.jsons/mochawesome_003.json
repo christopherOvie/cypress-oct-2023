@@ -1,0 +1,109 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-10-25T05:04:27.980Z",
+    "end": "2023-10-25T05:05:05.507Z",
+    "duration": 37527,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ae91647a-dfe6-4c79-a218-b1c51c09e39f",
+      "title": "",
+      "fullFile": "cypress\\e2e\\smokeTest\\addJobtitle.cy.js",
+      "file": "cypress\\e2e\\smokeTest\\addJobtitle.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4563d3e5-6d94-4d26-bb38-490289dbecc8",
+          "title": "verify Add Job title functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify add job title with valid input details",
+              "fullTitle": "verify Add Job title functionality verify add job title with valid input details",
+              "timedOut": null,
+              "duration": 34100,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\smokeTest\\\\addJobtitle.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\addJobtitle.cy.js\\\\verify Add Job title functionality -- verify add job title with valid input details (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit(Cypress.env(\"loginUrl\"));\ncy.get(\"input[placeholder='Username']\").type(Cypress.env(\"username\"));\ncy.get(\"input[placeholder='Password']\").type(Cypress.env(\"password\"));\ncy.get(\"button[type='submit']\").click();\ncy.url().should(\"eq\", \"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index\");\ncy.contains(\"Dashboard\").should(\"be.visible\");\ncy.contains(\"Admin\").click();\n//cy.get(\".oxd-main-menu-item.active\").click();\ncy.get(\"li:nth-of-type(2) > .oxd-topbar-body-nav-tab-item > .bi-chevron-down.oxd-icon\").click();\ncy.contains(\"Job Titles\").click();\ncy.get(\"button[class='oxd-button oxd-button--medium oxd-button--secondary']\").click();\ncy.get(\".oxd-form .oxd-input\").type(_addJobTitle.default.jobTitle);\ncy.get(\"textarea[placeholder='Type description here']\").type(_addJobTitle.default.jobDescription);\ncy.get(\"button[type='submit']\").click();\ncy.contains(\"Successfully Saved\").should(\"be.visible\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 30000ms: expected '<a.oxd-main-menu-item.active>' to be 'visible'\n\nThis element `<a.oxd-main-menu-item.active>` is not visible because its parent `<nav.oxd-navbar-nav>` has CSS property: `overflow: hidden` and an effective width and height of: `0 x 367` pixels.",
+                "estack": "AssertionError: Timed out retrying after 30000ms: expected '<a.oxd-main-menu-item.active>' to be 'visible'\n\nThis element `<a.oxd-main-menu-item.active>` is not visible because its parent `<nav.oxd-navbar-nav>` has CSS property: `overflow: hidden` and an effective width and height of: `0 x 367` pixels.\n    at Context.eval (webpack://learning-cypress-oct-2023/./cypress/e2e/smokeTest/addJobtitle.cy.js:12:29)",
+                "diff": null
+              },
+              "uuid": "6a1b3ead-0d59-406c-89f0-64bd6c179e0f",
+              "parentUUID": "4563d3e5-6d94-4d26-bb38-490289dbecc8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "6a1b3ead-0d59-406c-89f0-64bd6c179e0f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 34100,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

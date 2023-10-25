@@ -1,0 +1,149 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-10-25T04:59:02.734Z",
+    "end": "2023-10-25T05:00:30.812Z",
+    "duration": 88078,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "77afa1a9-6b47-40f4-8022-1414a1bf8bff",
+      "title": "",
+      "fullFile": "cypress\\e2e\\smokeTest\\addEmployee.cy.js",
+      "file": "cypress\\e2e\\smokeTest\\addEmployee.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "10d34e35-36fa-4730-aebf-d7a3e44f132a",
+          "title": "verify add employee functionality",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "verify login with valid username and valid password",
+              "fullTitle": "verify add employee functionality verify login with valid username and valid password",
+              "timedOut": null,
+              "duration": 6835,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\smokeTest\\\\addEmployee.cy.js\"\n}",
+              "code": "cy.visit(Cypress.env(\"loginUrl\"));\ncy.get(\"input[placeholder='Username']\").type(Cypress.env(\"username\"));\ncy.get(\"input[placeholder='Password']\").type(Cypress.env(\"password\"));\ncy.get(\"button[type='submit']\").click();\ncy.url().should(\"eq\", \"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index\");\n//cy.contains('Dashboard').should('be.visible')\ncy.contains(\"PIM\").click({\n  force: true\n});\ncy.contains(\"Add Employee\").click();\ncy.get(\"input[placeholder='First Name']\").type(\"christo\");\ncy.get(\"input[name='lastName']\").type(\"king\");\ncy.get(\"button[type='submit']\").click();\ncy.contains(\"Successfully Saved\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "12513cd0-d530-4755-ae87-114a561778c5",
+              "parentUUID": "10d34e35-36fa-4730-aebf-d7a3e44f132a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify mandatory details in add employee",
+              "fullTitle": "verify add employee functionality verify mandatory details in add employee",
+              "timedOut": null,
+              "duration": 32493,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\smokeTest\\\\addEmployee.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\addEmployee.cy.js\\\\verify add employee functionality -- verify mandatory details in add employee (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit(Cypress.env(\"loginUrl\"));\ncy.get(\"input[placeholder='Username']\").type(Cypress.env(\"username\"));\ncy.get(\"input[placeholder='Password']\").type(Cypress.env(\"password\"));\ncy.get(\"button[type='submit']\").click();\ncy.url().should(\"eq\", \"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index\");\ncy.contains(\"Dashboard\").should(\"be.visible\");\ncy.contains(\"PIM\").click({\n  force: true\n});\ncy.contains(\"Add Employee\").click();\ncy.get(\"button[type='submit']\").click();\ncy.contains(\"Required\").should(\"be.visible\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 30000ms: expected '<a.oxd-main-menu-item.active>' to be 'visible'\n\nThis element `<a.oxd-main-menu-item.active>` is not visible because its parent `<nav.oxd-navbar-nav>` has CSS property: `overflow: hidden` and an effective width and height of: `0 x 367` pixels.",
+                "estack": "AssertionError: Timed out retrying after 30000ms: expected '<a.oxd-main-menu-item.active>' to be 'visible'\n\nThis element `<a.oxd-main-menu-item.active>` is not visible because its parent `<nav.oxd-navbar-nav>` has CSS property: `overflow: hidden` and an effective width and height of: `0 x 367` pixels.\n    at Context.eval (webpack://learning-cypress-oct-2023/./cypress/e2e/smokeTest/addEmployee.cy.js:28:29)",
+                "diff": null
+              },
+              "uuid": "dcbc358a-b6e1-499e-8332-b3e1b980775d",
+              "parentUUID": "10d34e35-36fa-4730-aebf-d7a3e44f132a",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "verify charcter limit for first name field",
+              "fullTitle": "verify add employee functionality verify charcter limit for first name field",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(Cypress.env(\"loginUrl\"));\ncy.get(\"input[placeholder='Username']\").type(Cypress.env(\"username\"));\ncy.get(\"input[placeholder='Password']\").type(Cypress.env(\"password\"));\ncy.get(\"button[type='submit']\").click();\n//cy.url().should(\"eq\",\"https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index\")\ncy.contains(\"Dashboard\").should(\"be.visible\");\ncy.contains(\"PIM\").click();\ncy.contains(\"Add Employee\").click();\ncy.get(\"button[type='submit']\").click();\ncy.get(\"input[placeholder='First Name']\").type(\"xxxxrrrrrrrrrrrrrrrrrhhhhhhhhhhhhkkkkkkkkkkkkkkkkkkkkkk\");\ncy.contains(\"Should not exceed 30 characters\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "4e7d6a51-a72d-476c-a437-a378c6de69e2",
+              "parentUUID": "10d34e35-36fa-4730-aebf-d7a3e44f132a",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "12513cd0-d530-4755-ae87-114a561778c5"
+          ],
+          "failures": [
+            "dcbc358a-b6e1-499e-8332-b3e1b980775d"
+          ],
+          "pending": [],
+          "skipped": [
+            "4e7d6a51-a72d-476c-a437-a378c6de69e2"
+          ],
+          "duration": 39328,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
