@@ -21,9 +21,9 @@ describe("verify Add Job title functionality", () => {
       "button[class='oxd-button oxd-button--medium oxd-button--secondary']"
     ).click();
 
-    const randomText = Math.random().toString(36).substr(2, 10);   
-//const randomText = Math.random().toString(36).substring(2,7);
-//console.log(result);
+    const randomText = Math.random().toString(36).substr(2, 10);
+    //const randomText = Math.random().toString(36).substring(2,7);
+    //console.log(result);
     cy.get(".oxd-form .oxd-input").type(data.jobTitle + randomText);
     cy.get("textarea[placeholder='Type description here']").type(
       data.jobDescription

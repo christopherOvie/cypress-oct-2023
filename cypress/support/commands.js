@@ -10,6 +10,12 @@
 //
 //
 // -- This is a parent command --
+
+Cypress.Commands.add('login',(username, password) => { 
+const menuItems={
+  
+}
+});
 Cypress.Commands.add('login',(username, password) => { 
     cy.visit(Cypress.env("loginUrl"));
     cy.get("input[placeholder='Username']").type(username);
@@ -21,7 +27,7 @@ Cypress.Commands.add('login',(username, password) => {
     );
     cy.contains('Dashboard').should('be.visible')
   });
- //})
+ 
 
 //
 // -- This is a child command --

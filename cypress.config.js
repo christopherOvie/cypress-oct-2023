@@ -8,7 +8,7 @@ module.exports = defineConfig({
     pageLoadTimeout: 120000,
    // "viewportHeight": 375,
     //"viewportWidth": 667,
-    "retries": {openMode:3,runMode: 1}, //open mode  test run  runmode=comm
+    //"retries": {openMode:3,runMode: 1}, //open mode  test run  runmode=comm
     env:{
 "username":"Admin",
 "password":"admin123",

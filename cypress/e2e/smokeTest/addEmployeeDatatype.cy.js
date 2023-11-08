@@ -22,9 +22,9 @@ describe("verify add employee functionality", () => {
     cy.get("input[placeholder='Username']").type(Cypress.env("username"));
     cy.get("input[placeholder='Password']").type(Cypress.env("password"));
     cy.get("button[type='submit']").click();
-    //cy.url().should("eq","https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index")
+    //cy.url().should("eq","")
     cy.contains("Dashboard").should("be.visible");
-    cy.contains("PIM").click();
+    cy.contains("PIM").click();https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
     cy.contains("Add Employee").click();
     cy.get("button[type='submit']").click();
     cy.get("input[placeholder='First Name']").type(

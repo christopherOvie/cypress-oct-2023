@@ -9,7 +9,13 @@ describe("verify login functionality", () => {
       "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"
     );
     cy.contains('Dashboard').should('be.visible')
-  });
+    cy.get(".oxd-text.oxd-text--h6.oxd-topbar-header-breadcrumb-module")
+    .then(function($ele) {
+      cy.log($ele.text().includes("Dashboard"));
+    })
+
+});
+
   it("verify login with invalid username and valid password", () => {
     cy.visit(Cypress.env("loginUrl"));
     cy.get("input[placeholder='Username']").type("aaaaa");
