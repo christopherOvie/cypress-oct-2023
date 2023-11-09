@@ -27,8 +27,19 @@ Cypress.Commands.add('login',(username, password) => {
     );
     cy.contains('Dashboard').should('be.visible')
   });
- 
 
+  Cypress.Commands.add('login1',(value1, value2) => { 
+    const menuItems={
+
+    value1 : "Admin",
+    value2 : "PIM",
+    value3 : "Leave",
+    value4 : "Time",
+    value2 : "Recruitment",
+    value2 : "My Info",
+
+    }
+  });
 //
 // -- This is a child command --
 // Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
